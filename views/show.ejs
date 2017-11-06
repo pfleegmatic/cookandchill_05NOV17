@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+	<div class="ui huge header"><%= meal.title%></div>
+	<div class="ui top attached">
+			<div class="item">
+				<img class="ui centered rounded image" src="<%= meal.image %>">
+				<div class="content">
+					<span><%=meal.created.toDateString()%></span>
+				</div>
+			<div class="description">
+				<p><%= meal.body %></p>
+			</div>
+			<a class="ui orange basic button" href="/meals/<%= meal._id %>/edit">Edit</a>
+			<form id= "delete" action="/meals/<%= meal._id %>?_method=DELETE" method="POST">
+				<button class="ui red basic button">Delete</button>
+			</form>
+		   </div>
+    </div>
+</div>
+<% include ./partials/footer %> 

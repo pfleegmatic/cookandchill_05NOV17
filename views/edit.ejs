@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <%= meal.title%></div>
+    <form class="ui form" action="/meals/<%= meal._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="meal[title]" value="<%= meal.title%>">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="meal[image]" value="<%= meal.image%>">
+        </div>
+        <div class="field">
+            <label>Meal Ingredients</label>
+            <textarea name="meal[body]"><%= meal.body%></textarea>
+        </div>
+        <input class="ui violet big basic button" type="submit">
+    </form>
+</div>
+<% include ./partials/footer %> 

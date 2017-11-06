@@ -1,0 +1,32 @@
+<% include ./partials/header%>
+<div class="ui main text container">
+	<div class="ui huge header"> Food World Blog App</div>
+	<div class="ui top attached segment">
+		<div class="ui divided items">
+			<% meals.forEach(function(meal){ %>
+		 	<div class="item">
+		 		<div class="image">
+		 			<img src="<%= meal.image %>">
+		 		</div>
+		 		<div class="content">
+		 			<a class="header" href="/meals/<%= meal._id %>"><%= meal.title %></a>
+		 			<div class="meta">
+		 				<span><%=meal.created.toDateString()%></span>
+		 			</div>
+		 			<div class="description">
+		 				<p><%- meal.body.substring(0, 100) %>...</p>
+		 			</div>
+		 			<div class="extra">
+		 				<a class="ui floated basic violet button" href="/meals/<%= meal._id %>">Read More
+                          <i class="right chevron icon"></i>
+		 				</a>
+		 			</div>
+		 		</div>
+		 	</div>
+		  <% }); %>
+		</div>
+	</div>
+</div>
+
+ <% include ./partials/footer%>
+

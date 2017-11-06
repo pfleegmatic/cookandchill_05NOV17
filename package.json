@@ -1,0 +1,28 @@
+{
+  "name": "foodworldapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.3.0",
+    "express-sanitizer": "^1.0.2",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.12.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zougheb/ChillAndCook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zougheb/ChillAndCook/issues"
+  },
+  "homepage": "https://github.com/Zougheb/ChillAndCook#readme"
+}
